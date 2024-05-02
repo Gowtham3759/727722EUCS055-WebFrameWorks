@@ -7,9 +7,9 @@ import java.util.List;
 
 
 @Repository
-public interface GowthamPersonRepo extends JpaRepository<Person,Integer>{
+public interface GowthamPersonRepo extends JpaRepository<GowthamPerson,Integer>{
 
-    List<Person> findByLastnameNot(String lastname);
-    List<Person> findByAgeNotIn(List<Integer> ages);
+    List<GowthamPerson> findByLastnameNot(String lastname);
+    List<GowthamPerson> findByAgeNotIn(List<Integer> ages);
     
 }

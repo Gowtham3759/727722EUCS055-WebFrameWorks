@@ -11,9 +11,9 @@ import com.example.springapp.repository.PersonRepo;
 @Service
 public class GowthamPersonService {
     @Autowired
-    private PersonRepo rep;
+    private GowthamPersonRepo rep;
 
-    public boolean post(Person person)
+    public boolean post(GowthamPerson person)
     {
         try
         {
@@ -26,12 +26,12 @@ public class GowthamPersonService {
         }
     }
 
-    public List<Person> start(String lastname)
+    public List<GowthamPerson> start(String lastname)
     {
         return rep.findByLastnameNot(lastname);
     }
 
-    public List<Person> end(List<Integer> ages)
+    public List<GowthamPerson> end(List<Integer> ages)
     {
         return rep.findByAgeNotIn(ages);
     }
